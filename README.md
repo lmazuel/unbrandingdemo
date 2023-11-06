@@ -19,6 +19,13 @@ git clone https://github.com/bterlson/openai-in-typespec
 tsp compile openai-in-typespec/main.tsp
 ```
 
+## Test no azure
+
+```shell
+cd openai
+grep -ri azure *
+```
+
 ## Run the sample
 
 ```shell
