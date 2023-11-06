@@ -1,10 +1,8 @@
-parameters:
-  service-dir:
-    default: "sdk/contentsafety"
 emit:
   - "@azure-tools/typespec-python"
 options:
   "@azure-tools/typespec-python":
-    package-dir: "azure-ai-contentsafety"
-    package-version: "1.0.0b1"
+    package-dir: "openai"
+    emitter-output-dir: "{cwd}/{package-dir}"
     package-name: "{package-dir}"
+    unbranded: true
