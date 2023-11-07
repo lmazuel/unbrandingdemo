@@ -3,6 +3,7 @@
 
 import os
 from openai import OpenAIClient
+from openai.models import CreateChatCompletionResponse
 from corehttp.credentials import ServiceKeyCredential
 
 api_key = os.getenv("OPENAI_API_KEY")
@@ -10,7 +11,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 client = OpenAIClient(ServiceKeyCredential(api_key))
 
 print("----- standard request -----")
-completion = client.chat_completions.create_chat_completion(
+completion: CreateChatCompletionResponse = client.create_chat_completion(
     {
         "model": "gpt-4",
         "messages": [
@@ -24,7 +25,7 @@ completion = client.chat_completions.create_chat_completion(
 print(completion.choices[0].message.content)
 
 print("\n----- failed request -----")
-completion = client.chat_completions.create_chat_completion(
+completion = client.create_chat_completion(
     {
         #    "model": "gpt-4",
         "messages": [
@@ -33,5 +34,5 @@ completion = client.chat_completions.create_chat_completion(
                 "content": "Say this is a test",
             },
         ],
-    }
+    },
 )
