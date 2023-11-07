@@ -1,6 +1,7 @@
 # Specific to my project
 node_modules
 openai-in-typespec
+openai
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
