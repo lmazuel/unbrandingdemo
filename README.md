@@ -49,10 +49,12 @@ should give
 This is a test.
 
 ----- failed request -----
+UserAgent was: python-openai/1.0.0b1 Python/3.10.12 (Linux-5.10.102.1-microsoft-standard-WSL2-x86_64-with-glibc2.35)
+
 Traceback (most recent call last):
-  File "/home/lmazuel/git/unbrandingdemo/sample_openai.py", line 25, in <module>
-    completion = client.chat_completions.create_chat_completion({
-  File "/home/lmazuel/git/unbrandingdemo/openai/openai/operations/_operations.py", line 2629, in create_chat_completion
+  File "/home/lmazuel/git/unbrandingdemo/sample_openai.py", line 47, in <module>
+    completion = client.create_chat_completion(
+  File "/home/lmazuel/git/unbrandingdemo/openai/openai/_operations/_operations.py", line 796, in create_chat_completion
     raise HttpResponseError(response=response, model=error)
 corehttp.exceptions.HttpResponseError: Operation returned an invalid status 'Bad Request'
 Content: {
