@@ -26,6 +26,15 @@ cd openai
 grep -ri azure *
 ```
 
+## Install the package
+
+```shell
+python3 -m venv venvruntime
+source venvruntime/bin/activate
+pip install -e openai
+pip list
+```
+
 ## Run the sample
 
 ```shell
